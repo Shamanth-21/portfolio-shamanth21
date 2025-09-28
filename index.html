@@ -30,14 +30,14 @@
     a:hover{text-decoration:underline}
     header{position:sticky;top:0;background:var(--bg);z-index:10;border-bottom:1px solid rgba(255,255,255,.08)}
     .bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
-    .brand-name{font-size:28px;font-weight:800}
-    .brand-sub{font-weight:600;color:var(--muted)}
+    .brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
     nav a{margin-left:18px;font-weight:700;padding:8px 14px;border-radius:8px;background:rgba(255,255,255,.04)}
     .hero-name{background:linear-gradient(135deg, rgba(45,212,191,.2), rgba(124,58,237,.2))}
-    .hero-wrap{max-width:1100px;margin:0 auto;padding:60px 24px;text-align:center}
+    .hero-wrap{max-width:1100px;margin:0 auto;padding:60px 24px 72px;text-align:center}
     .hero-title{font-size:64px;font-weight:800;margin-bottom:12px}
     .hero-sub{font-size:20px;color:var(--muted)}
     .container{max-width:1100px;margin:0 auto;padding:24px}
+    .section{margin-top:28px}
     .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
     h2{font-size:26px;margin-bottom:12px}
     .projects-grid{display:grid;gap:22px}
@@ -47,20 +47,17 @@
     .list-plain{padding-left:20px}
     .tag{display:inline-block;margin:6px 6px 0 0;padding:6px 12px;border-radius:999px;background:rgba(109,94,252,.2);color:#e0e4ff;font-size:13px}
     footer{margin:40px 0 16px;text-align:center;color:var(--muted)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   </style>
 </head>
 <body>
   <header>
     <div class="bar">
-      <div>
-        <div class="brand-name">Shamanth Kodipura Mahesh</div>
-        <div class="brand-sub">Data Scientist · ML & Analytics</div>
-      </div>
+      <div class="brand-mark" aria-hidden="true"></div>
       <nav>
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -75,63 +72,52 @@
 
   <main class="container">
     <!-- ABOUT ME -->
-    <section id="about" class="card">
+    <section id="about" class="card section">
       <h2>About Me</h2>
-      <p>I’m a data scientist with 6+ years of hands-on experience translating messy, multi-source data into decisions. I build forecasting models, causal inference pipelines, LLM/NLP systems, and interpretable ML workflows—always with deployment and monitoring in mind. I’m fluent in Python and SQL and ship with MLflow, Docker, and FastAPI so work is reproducible and production-ready.</p>
-      <p>Recent highlights include: climate-driven yield forecasting with SHAP dashboards for policy planning; HR analytics at MyFuse.In where I improved workforce planning accuracy by 30% and reduced churn by 21% using uplift/causal methods; and enterprise data automation saving ~$245K/year through robust ETL and BI. I enjoy partnering with domain experts and leadership to turn ambiguous questions into measurable outcomes.</p>
+      <p>I’m a data scientist with 6+ years of hands-on experience translating messy, multi‑source data into decisions. I build forecasting models, causal inference pipelines, LLM/NLP systems, and interpretable ML workflows—always with deployment and monitoring in mind. I’m fluent in Python and SQL and ship with MLflow, Docker, and FastAPI so work is reproducible and production‑ready.</p>
+      <p>Recent highlights include climate‑driven yield forecasting with SHAP dashboards for policy planning; HR analytics at MyFuse.In where I improved workforce planning accuracy by 30% and reduced churn by 21% using uplift/causal methods; and enterprise data automation saving ~$245K/year through robust ETL and BI. I enjoy partnering with domain experts and leadership to turn ambiguous questions into measurable outcomes.</p>
     </section>
 
     <!-- PROJECTS INTRO & QUICK LINKS ROW -->
-    <section class="grid cols-2" id="projects">
-      <div class="card">
-        <h2>Projects</h2>
-        <p class="muted">Selected projects demonstrating end‑to‑end ownership: framing → modeling → evaluation → delivery.</p>
-        <p><a class="btn" href="#projects-list">Explore Projects →</a></p>
-      </div>
-      <aside class="card quick-links" aria-labelledby="quicklinks">
-        <h2 id="quicklinks">Quick Links</h2>
-        <p style="line-height:1.9">
-          <span class="kbd">GitHub</span> <a href="https://github.com/Shamanth-21" target="_blank" rel="noopener">@Shamanth-21</a><br>
-          <span class="kbd">LinkedIn</span> <a href="https://www.linkedin.com/in/shamanth-km/" target="_blank" rel="noopener">/shamanth-km</a><br>
-          <span class="kbd">Email</span> <a href="mailto:shamanth21@usf.edu" target="_blank" rel="noopener">shamanth21@usf.edu</a>
-        </p>
-      </aside>
+    <section class="card section" id="projects">
+      <h2>Projects</h2>
+      <p class="muted">Selected projects demonstrating end‑to‑end ownership: framing → modeling → evaluation → delivery.</p>
     </section>
 
     <!-- PROJECTS GRID (full-width cards) -->
-    <section id="projects-list" class="projects-grid">
+    <section id="projects-list" class="projects-grid section">
 
       <article class="card project">
         <h3>Benchmarking SQL‑Generating LLMs (NL→SQL)</h3>
-        <p class="muted">Built a rigorous, reproducible evaluation harness for text‑to‑SQL using <em>exact‑match</em> and <em>execution accuracy</em>. Compared Mistral‑7B‑Instruct and CodeLLaMA‑7B across plain, schema‑aware, and RAG prompts; added LoRA fine‑tuning for CodeLLaMA on Chinook to test adaptation.</p>
-        <div class="kpi">Result: RAG markedly cut hallucinations; CodeLLaMA produced more structurally correct SQL, while Mistral aligned better with natural language. Outcome: a practical vetting workflow teams can run offline.</div>
+        <p class="muted">Built a reproducible evaluation harness for text‑to‑SQL using exact‑match and execution accuracy. Compared Mistral‑7B‑Instruct and CodeLLaMA‑7B across plain, schema‑aware, and RAG prompts; added LoRA fine‑tuning for CodeLLaMA on Chinook.</p>
+        <div class="kpi">Result: RAG cut hallucinations substantially; CodeLLaMA produced more structurally correct SQL while Mistral aligned better to natural language.</div>
         <ul class="list-plain">
-          <li>Dual metrics prevent over‑optimistic scoring and surface logically wrong-but-valid queries.</li>
+          <li>Dual metrics catch logically wrong‑but‑runnable queries.</li>
           <li>Prompt builder retrieves schema/examples per query to ground generations.</li>
-          <li>Artifacts and runs logged for apples‑to‑apples model comparisons.</li>
+          <li>All runs logged for apples‑to‑apples comparisons.</li>
         </ul>
         <span class="tag">LLM</span> <span class="tag">RAG</span> <span class="tag">Evaluation</span>
       </article>
 
       <article class="card project">
         <h3>Demand Signal Classification with LoRA‑tuned Phi‑1.5</h3>
-        <p class="muted">Converted noisy B2B sales notes into actionable demand categories using parameter‑efficient fine‑tuning (LoRA) on Phi‑1.5 with 4‑bit quantization—engineered to run on a Colab T4.</p>
-        <div class="kpi">Result: Validation accuracy 100% on held‑out synthetic notes; precision/recall/F1 all 1.00. Next: expand with real labeled notes + HITL validation.</div>
+        <p class="muted">Converted noisy B2B sales notes into standardized demand categories with LoRA on Phi‑1.5 using 4‑bit quantization—engineered to run on a Colab T4.</p>
+        <div class="kpi">Validation accuracy 100% on held‑out synthetic notes; precision/recall/F1 all 1.00. Next: expand with real labeled notes + HITL validation.</div>
         <ul class="list-plain">
-          <li>Synthesized ~2k notes with realistic noise (typos, spacing, urgency markers) to mirror production.</li>
-          <li>~1% trainable parameters via LoRA; early stopping to manage overfitting risk.</li>
-          <li>Designed review loop for high‑stakes decisions before deployment.</li>
+          <li>Synthesized ~2k notes with realistic noise (typos, spacing, urgency markers).</li>
+          <li>~1% trainable parameters; early stopping controls overfitting.</li>
+          <li>Human‑in‑the‑loop review for high‑stakes deployment.</li>
         </ul>
         <span class="tag">LLM</span> <span class="tag">LoRA</span> <span class="tag">NLP</span>
       </article>
 
       <article class="card project">
         <h3>Predicting Online Shoppers’ Purchasing Intentions</h3>
-        <p class="muted">Built a high‑precision classifier on UCI e‑commerce sessions to sharpen targeting while controlling false positives.</p>
-        <div class="kpi">Best model: XGBoost (no SMOTE) — F1 0.64, Precision 0.71, Recall 0.58, Accuracy 0.85. Most predictive: Page Value, Bounce Rate, Exit Rate.</div>
+        <p class="muted">High‑precision classifier on UCI e‑commerce sessions to sharpen targeting while controlling false positives.</p>
+        <div class="kpi">Best model: XGBoost (no SMOTE) — F1 0.64 · Precision 0.71 · Recall 0.58 · Accuracy 0.85. Top drivers: Page Value, Bounce Rate, Exit Rate.</div>
         <ul class="list-plain">
-          <li>End‑to‑end pipeline: cleaning → one‑hot encoding → stratified split → scaling → model comparison.</li>
-          <li>Business framing emphasized conversion lift and efficient spend, not just accuracy.</li>
+          <li>Pipeline: cleaning → one‑hot encoding → stratified split → scaling → model comparison.</li>
+          <li>Framed around conversion lift and efficient marketing spend.</li>
         </ul>
         <span class="tag">Classification</span> <span class="tag">XGBoost</span> <span class="tag">E‑commerce</span>
       </article>
@@ -142,7 +128,7 @@
         <div class="kpi">Precision 81.9% · Recall 44.3% · F1 57.5% · ROC‑AUC 66.2%. Lightweight enough for near‑real‑time IDS.</div>
         <ul class="list-plain">
           <li>Dense AE 78→16→78; MSE loss; Adam; StandardScaler; 88th‑percentile thresholding.</li>
-          <li>Follow‑ups: VAE/LSTM‑AE for sequences and adaptive thresholds per service.</li>
+          <li>Next: VAE/LSTM‑AE for sequences and adaptive thresholds per service.</li>
         </ul>
         <span class="tag">Anomaly Detection</span> <span class="tag">Autoencoder</span> <span class="tag">Cybersecurity</span>
       </article>
@@ -150,32 +136,21 @@
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="card" style="margin-top:18px">
+    <section id="skills" class="card section">
       <h2>Skills</h2>
-      <div class="grid cols-2">
-        <div>
-          <p><strong>Programming:</strong> Python, SQL, R, Bash, C#</p>
-          <p><strong>ML & Forecasting:</strong> Scikit‑learn, XGBoost, LightGBM, Prophet, ARIMA, TimeGPT, DoWhy, EconML</p>
-          <p><strong>Deep Learning:</strong> PyTorch, TensorFlow, Keras, Hugging Face, torchaudio, torchvision</p>
-        </div>
-        <div>
-          <p><strong>MLOps & Data:</strong> MLflow, Docker, FastAPI, Git, Airflow, model monitoring (drift, SHAP, LIME), AWS, PySpark, Snowflake, ETL/ELT</p>
-          <p><strong>Statistics & Experimentation:</strong> Hypothesis testing, regression, clustering, causal inference, A/B testing, Bayesian inference</p>
-          <p><strong>Visualization & BI:</strong> Tableau, Power BI, Matplotlib, Seaborn, Plotly, Excel, PowerPoint</p>
-        </div>
+      <div class="projects-grid">
+        <p><strong>Programming:</strong> Python, SQL, R, Bash, C#</p>
+        <p><strong>ML & Forecasting:</strong> Scikit‑learn, XGBoost, LightGBM, Prophet, ARIMA, TimeGPT, DoWhy, EconML</p>
+        <p><strong>Deep Learning:</strong> PyTorch, TensorFlow, Keras, Hugging Face, torchaudio, torchvision</p>
+        <p><strong>MLOps & Deployment:</strong> MLflow, Docker, FastAPI, Git, Airflow, model monitoring (drift, SHAP, LIME)</p>
+        <p><strong>Data Engineering:</strong> AWS, PySpark, Snowflake, ETL/ELT, Feature Engineering, Web Scraping</p>
+        <p><strong>Statistics & Experimentation:</strong> Hypothesis testing, regression, clustering, causal inference, A/B testing, Bayesian inference</p>
+        <p><strong>Visualization & BI:</strong> Tableau, Power BI, Matplotlib, Seaborn, Plotly, Excel, PowerPoint</p>
       </div>
     </section>
 
     <!-- EXPERIENCE (from resume, concise) -->
-    <section id="experience" class="card" style="margin-top:18px">
-      <h2>Experience</h2>
-      <ul class="list-plain">
-        <li><strong>ML Engineer – Research Assistant</strong>, Supply Chain Innovation Lab, USF — Climate‑driven crop yield forecasting (R² > 0.85); SHAP dashboards for policy; MLflow‑tracked pipelines.</li>
-        <li><strong>Data Scientist</strong>, MyFuse.In — Attrition/workload forecasting (+30% planning accuracy); uplift/causal L&D impact (churn −21%); prod pipelines w/ SHAP & drift monitoring.</li>
-        <li><strong>BI Specialist / Data Analyst</strong>, MyFuse.In — Automated Snowflake pipelines; Tableau KPIs; sourcing optimization (save $90K/yr).</li>
-        <li><strong>Data Analyst</strong>, Dyumath Technologies — ETL automation to 98% data accuracy; Power BI dashboards; ~$245K/yr cost savings.</li>
-      </ul>
-    </section>
+    
 
     <!-- CONTACT -->
     <section id="contact" class="card" style="margin-top:18px">
