@@ -4,239 +4,189 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shamanth Kodipura Mahesh — Data Scientist</title>
-  <meta name="description" content="Data scientist specializing in predictive modeling, experiment design, and ML systems — portfolio and case studies." />
+  <meta name="description" content="Portfolio of Shamanth Kodipura Mahesh — Data Scientist with expertise in predictive modeling, causal inference, NLP/LLMs, forecasting, and MLOps." />
   <meta name="color-scheme" content="light dark" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-  <meta property="og:title" content="Shamanth Kodipura Mahesh — Data Scientist">
-  <meta property="og:description" content="Portfolio, projects, skills, and contact." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://Shamanth-21.github.io/portfolio/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
   <style>
     :root{
       --bg:#0b1222; --ink:#e7e9ee; --muted:#a7aab4;
       --panel:#0d162b; --card:#111a32;
-      --brand:#6d5efc; --brand-2:#2bd4d6; --ok:#10b981; --warn:#f59e0b;
-      --ring:rgba(109,94,252,.5);
-      --radius:16px; --shadow:0 12px 28px rgba(0,0,0,.35);
+      --brand:#6d5efc; --brand-2:#2bd4d6;
+      --radius:18px; --shadow:0 14px 30px rgba(0,0,0,.35);
     }
     @media (prefers-color-scheme: light){
       :root{
         --bg:#f7f7fb; --ink:#0f172a; --muted:#5b677a;
         --panel:#ffffff; --card:#ffffff;
-        --brand:#5b4df2; --brand-2:#0bbcd1; --ok:#0f9d77; --warn:#c98307;
-        --ring:rgba(91,77,242,.3); --shadow:0 10px 24px rgba(17,24,39,.08);
+        --brand:#5b4df2; --brand-2:#0bbcd1;
+        --shadow:0 10px 24px rgba(17,24,39,.08);
       }
     }
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);scroll-behavior:smooth}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
-    section{scroll-margin-top:90px}
+    header{position:sticky;top:0;background:var(--bg);z-index:10;border-bottom:1px solid rgba(255,255,255,.08)}
+    .bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+    .brand-name{font-size:28px;font-weight:800}
+    .brand-sub{font-weight:600;color:var(--muted)}
+    nav a{margin-left:18px;font-weight:700;padding:8px 14px;border-radius:8px;background:rgba(255,255,255,.04)}
+    .hero-name{background:linear-gradient(135deg, rgba(45,212,191,.2), rgba(124,58,237,.2))}
+    .hero-wrap{max-width:1100px;margin:0 auto;padding:60px 24px;text-align:center}
+    .hero-title{font-size:64px;font-weight:800;margin-bottom:12px}
+    .hero-sub{font-size:20px;color:var(--muted)}
     .container{max-width:1100px;margin:0 auto;padding:24px}
-    header{position:sticky;top:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0)),var(--bg);backdrop-filter:saturate(1.1) blur(6px);z-index:10}
-    .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08)}
-    .logo{display:flex;align-items:center;gap:12px}
-    .mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
-    .brand-name{font-size:20px;font-weight:800;letter-spacing:.2px}
-    .brand-sub{color:var(--muted);font-weight:600}
-    nav a{margin-left:18px;font-weight:700}
-    .btn{display:inline-flex;gap:10px;align-items:center;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white;border:none;padding:12px 16px;border-radius:12px;font-weight:800;box-shadow:var(--shadow)}
-    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.18);color:var(--ink)}
-    .btn:focus-visible{outline:3px solid var(--ring);outline-offset:2px}
-    .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;margin:26px 0}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
-    .title{font-size:44px;line-height:1.08;margin:6px 0 10px}
-    .muted{color:var(--muted)}
-    h2{font-size:24px;margin:6px 0 10px}
-    .grid{display:grid;gap:18px}
-    .cols-2{grid-template-columns:repeat(2,1fr)}
-    .cols-3{grid-template-columns:repeat(3,1fr)}
-    @media (max-width:980px){.hero{grid-template-columns:1fr}.cols-2,.cols-3{grid-template-columns:1fr}}
-    .tag{display:inline-block;margin:6px 6px 0 0;padding:6px 10px;border-radius:999px;background:rgba(109,94,252,.18);color:#e0e4ff;border:1px solid rgba(109,94,252,.4);font-size:12px}
-    .kpi{display:flex;gap:10px;align-items:baseline}
-    .kpi strong{font-size:20px}
-    .list-plain{padding-left:18px}
-    footer{margin:40px 0 16px;color:var(--muted);text-align:center}
-    .pill{border:1px solid rgba(255,255,255,.14);padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.04);font-weight:700}
-    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:13px; padding:4px 8px; border:1px solid rgba(255,255,255,.22); border-radius:10px; background:rgba(255,255,255,.06)}
-    .quick-links a{font-size:16px;font-weight:700}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+    h2{font-size:26px;margin-bottom:12px}
+    .projects-grid{display:grid;gap:22px}
+    .project h3{font-size:28px;margin-bottom:8px}
+    .project .muted{color:var(--muted)}
+    .kpi{margin:8px 0;font-weight:600}
+    .list-plain{padding-left:20px}
+    .tag{display:inline-block;margin:6px 6px 0 0;padding:6px 12px;border-radius:999px;background:rgba(109,94,252,.2);color:#e0e4ff;font-size:13px}
+    footer{margin:40px 0 16px;text-align:center;color:var(--muted)}
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Shamanth Kodipura Mahesh",
-    "url": "https://Shamanth-21.github.io/portfolio/",
-    "sameAs": ["https://github.com/Shamanth-21", "https://www.linkedin.com/in/shamanth-km/"],
-    "jobTitle": "Data Scientist",
-    "knowsAbout": ["machine learning","predictive modeling","time series","MLOps","A/B testing","causal inference"]
-  }
-  </script>
 </head>
 <body>
   <header>
-    <div class="bar container">
-      <div class="logo">
-        <div class="mark" aria-hidden="true"></div>
-        <div>
-          <div class="brand-name">Shamanth Kodipura Mahesh</div>
-          <div class="brand-sub">Data Scientist · ML & Analytics</div>
-        </div>
+    <div class="bar">
+      <div>
+        <div class="brand-name">Shamanth Kodipura Mahesh</div>
+        <div class="brand-sub">Data Scientist · ML & Analytics</div>
       </div>
-      <nav aria-label="Primary">
-        <a href="#about" class="pill">About Me</a>
-        <a href="#projects" class="pill">Projects</a>
-        <a href="#skills" class="pill">Skills</a>
-        <a href="#contact" class="pill">Contact</a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
+
+  <div class="hero-name">
+    <div class="hero-wrap">
+      <div class="hero-title">Shamanth Kodipura Mahesh</div>
+      <div class="hero-sub">Graduate Student · Data Scientist · AI & Business Analytics</div>
+    </div>
+  </div>
 
   <main class="container">
     <!-- ABOUT ME -->
     <section id="about" class="card">
       <h2>About Me</h2>
-      <p>Passionate about turning data into impact, I bring over 6 years of experience building forecasting models, causal inference pipelines, LLM-based systems, and interpretable ML workflows. My work spans predictive analytics, time series forecasting, anomaly detection, and enterprise-scale MLOps solutions. I thrive at the intersection of data science and business, delivering reproducible, production-ready solutions that solve complex problems and drive decision-making.</p>
+      <p>I’m a data scientist with 6+ years of hands-on experience translating messy, multi-source data into decisions. I build forecasting models, causal inference pipelines, LLM/NLP systems, and interpretable ML workflows—always with deployment and monitoring in mind. I’m fluent in Python and SQL and ship with MLflow, Docker, and FastAPI so work is reproducible and production-ready.</p>
+      <p>Recent highlights include: climate-driven yield forecasting with SHAP dashboards for policy planning; HR analytics at MyFuse.In where I improved workforce planning accuracy by 30% and reduced churn by 21% using uplift/causal methods; and enterprise data automation saving ~$245K/year through robust ETL and BI. I enjoy partnering with domain experts and leadership to turn ambiguous questions into measurable outcomes.</p>
     </section>
 
-    <!-- PROJECTS CTA ROW -->
-    <section class="hero" id="projects">
+    <!-- PROJECTS INTRO & QUICK LINKS ROW -->
+    <section class="grid cols-2" id="projects">
       <div class="card">
-        <h1 class="title">Projects</h1>
-        <p class="muted">Highlighted below are selected projects that showcase my technical expertise and ability to drive measurable outcomes.</p>
-        <p>
-          <a class="btn" href="#projects-list">Explore Projects →</a>
-        </p>
+        <h2>Projects</h2>
+        <p class="muted">Selected projects demonstrating end‑to‑end ownership: framing → modeling → evaluation → delivery.</p>
+        <p><a class="btn" href="#projects-list">Explore Projects →</a></p>
       </div>
       <aside class="card quick-links" aria-labelledby="quicklinks">
         <h2 id="quicklinks">Quick Links</h2>
-        <p>
-          <span class="kbd">GitHub</span> · <a href="https://github.com/Shamanth-21" target="_blank" rel="noopener">@Shamanth-21</a><br>
-          <span class="kbd">LinkedIn</span> · <a href="https://www.linkedin.com/in/shamanth-km/" target="_blank" rel="noopener">/shamanth-km</a><br>
-          <span class="kbd">Email</span> · <a href="mailto:shamanth21@usf.edu" target="_blank" rel="noopener">shamanth21@usf.edu</a>
+        <p style="line-height:1.9">
+          <span class="kbd">GitHub</span> <a href="https://github.com/Shamanth-21" target="_blank" rel="noopener">@Shamanth-21</a><br>
+          <span class="kbd">LinkedIn</span> <a href="https://www.linkedin.com/in/shamanth-km/" target="_blank" rel="noopener">/shamanth-km</a><br>
+          <span class="kbd">Email</span> <a href="mailto:shamanth21@usf.edu" target="_blank" rel="noopener">shamanth21@usf.edu</a>
         </p>
       </aside>
     </section>
 
-    <!-- PROJECTS GRID -->
-    <section id="projects-list" class="grid cols-2">
-      <h2 class="sr-only">Project Case Studies</h2>
+    <!-- PROJECTS GRID (full-width cards) -->
+    <section id="projects-list" class="projects-grid">
 
-      <article class="card">
-        <h2>Predicting Online Shoppers' Purchasing Intentions</h2>
-        <p class="muted">Classifier for purchase intent on UCI e-commerce sessions; emphasized business alignment and actionable features.</p>
-        <div class="kpi"><strong>F1 = 0.64</strong><span class="muted"> · Precision 0.71 · Recall 0.58 · Accuracy 0.85</span></div>
+      <article class="card project">
+        <h3>Benchmarking SQL‑Generating LLMs (NL→SQL)</h3>
+        <p class="muted">Built a rigorous, reproducible evaluation harness for text‑to‑SQL using <em>exact‑match</em> and <em>execution accuracy</em>. Compared Mistral‑7B‑Instruct and CodeLLaMA‑7B across plain, schema‑aware, and RAG prompts; added LoRA fine‑tuning for CodeLLaMA on Chinook to test adaptation.</p>
+        <div class="kpi">Result: RAG markedly cut hallucinations; CodeLLaMA produced more structurally correct SQL, while Mistral aligned better with natural language. Outcome: a practical vetting workflow teams can run offline.</div>
         <ul class="list-plain">
-          <li>• Best model <strong>XGBoost</strong> (no SMOTE); key drivers: Page Value, Bounce Rate, Exit Rate</li>
-          <li>• Pipeline: cleaning → one‑hot encoding → stratified split → scaling → model comparison</li>
-          <li>• Outcome: improved targeting while limiting false positives for marketing efficiency</li>
+          <li>Dual metrics prevent over‑optimistic scoring and surface logically wrong-but-valid queries.</li>
+          <li>Prompt builder retrieves schema/examples per query to ground generations.</li>
+          <li>Artifacts and runs logged for apples‑to‑apples model comparisons.</li>
         </ul>
-        <p>
-          <a href="#" target="_blank" rel="noopener">Slides</a> ·
-          <a href="#" target="_blank" rel="noopener">Report</a>
-        </p>
-        <span class="tag">Classification</span><span class="tag">XGBoost</span><span class="tag">E‑commerce</span>
+        <span class="tag">LLM</span> <span class="tag">RAG</span> <span class="tag">Evaluation</span>
       </article>
 
-      <article class="card">
-        <h2>Demand Signal Classification Using LoRA‑tuned Phi‑1.5</h2>
-        <p class="muted">PEFT fine‑tuning to classify B2B sales notes into actionable categories under tight compute limits.</p>
-        <div class="kpi"><strong>Val acc 100%</strong><span class="muted"> · P=1.00 · R=1.00 · F1=1.00 (held‑out set)</span></div>
+      <article class="card project">
+        <h3>Demand Signal Classification with LoRA‑tuned Phi‑1.5</h3>
+        <p class="muted">Converted noisy B2B sales notes into actionable demand categories using parameter‑efficient fine‑tuning (LoRA) on Phi‑1.5 with 4‑bit quantization—engineered to run on a Colab T4.</p>
+        <div class="kpi">Result: Validation accuracy 100% on held‑out synthetic notes; precision/recall/F1 all 1.00. Next: expand with real labeled notes + HITL validation.</div>
         <ul class="list-plain">
-          <li>• <strong>LoRA</strong> adapters on 1.3B‑param Phi‑1.5; ~1% trainable params with 4‑bit quantization</li>
-          <li>• Custom 2,000‑note synthetic dataset with realistic noise (typos, spacing, urgency tokens)</li>
-          <li>• Colab T4 GPU; early stopping + HITL review planned to mitigate overfitting risks</li>
+          <li>Synthesized ~2k notes with realistic noise (typos, spacing, urgency markers) to mirror production.</li>
+          <li>~1% trainable parameters via LoRA; early stopping to manage overfitting risk.</li>
+          <li>Designed review loop for high‑stakes decisions before deployment.</li>
         </ul>
-        <p>
-          <a href="#" target="_blank" rel="noopener">Slides</a> ·
-          <a href="#" target="_blank" rel="noopener">Report</a>
-        </p>
-        <span class="tag">LLM</span><span class="tag">LoRA</span><span class="tag">NLP</span>
+        <span class="tag">LLM</span> <span class="tag">LoRA</span> <span class="tag">NLP</span>
       </article>
 
-      <article class="card">
-        <h2>Autoencoders for Network Anomaly Detection (CICIDS‑2017)</h2>
-        <p class="muted">Unsupervised AE trained on benign traffic; flags attacks via reconstruction error thresholding.</p>
-        <div class="kpi"><strong>Precision 81.9%</strong><span class="muted"> · Recall 44.3% · F1 57.5% · ROC‑AUC 66.2%</span></div>
+      <article class="card project">
+        <h3>Predicting Online Shoppers’ Purchasing Intentions</h3>
+        <p class="muted">Built a high‑precision classifier on UCI e‑commerce sessions to sharpen targeting while controlling false positives.</p>
+        <div class="kpi">Best model: XGBoost (no SMOTE) — F1 0.64, Precision 0.71, Recall 0.58, Accuracy 0.85. Most predictive: Page Value, Bounce Rate, Exit Rate.</div>
         <ul class="list-plain">
-          <li>• Dense AE 78→16→78, MSE loss, Adam; StandardScaler on features</li>
-          <li>• Threshold at 88th percentile of validation error; visualized separability via histograms</li>
-          <li>• Lightweight for near real‑time IDS; next: VAE/LSTM‑AE for sequences</li>
+          <li>End‑to‑end pipeline: cleaning → one‑hot encoding → stratified split → scaling → model comparison.</li>
+          <li>Business framing emphasized conversion lift and efficient spend, not just accuracy.</li>
         </ul>
-        <p>
-          <a href="#" target="_blank" rel="noopener">Report</a>
-        </p>
-        <span class="tag">Anomaly Detection</span><span class="tag">Autoencoder</span><span class="tag">Cybersecurity</span>
+        <span class="tag">Classification</span> <span class="tag">XGBoost</span> <span class="tag">E‑commerce</span>
       </article>
 
-      <article class="card">
-        <h2>Benchmarking SQL‑Generating LLMs</h2>
-        <p class="muted">Evaluated Mistral‑7B‑Instruct and CodeLLaMA‑7B for NL→SQL with Spider and Chinook; tested plain vs schema vs RAG prompts.</p>
+      <article class="card project">
+        <h3>Autoencoders for Network Anomaly Detection (CICIDS‑2017)</h3>
+        <p class="muted">Unsupervised detection trained on benign traffic; flags attacks via reconstruction‑error thresholds with simple monitoring.</p>
+        <div class="kpi">Precision 81.9% · Recall 44.3% · F1 57.5% · ROC‑AUC 66.2%. Lightweight enough for near‑real‑time IDS.</div>
         <ul class="list-plain">
-          <li>• Dual scoring: exact match + execution accuracy</li>
-          <li>• Findings: RAG reduced hallucinations; CodeLLaMA more structurally correct, Mistral better NL alignment</li>
-          <li>• Value: reproducible benchmark to vet LLMs before production</li>
+          <li>Dense AE 78→16→78; MSE loss; Adam; StandardScaler; 88th‑percentile thresholding.</li>
+          <li>Follow‑ups: VAE/LSTM‑AE for sequences and adaptive thresholds per service.</li>
         </ul>
-        <p>
-          <a href="https://github.com/Shamanth-21" target="_blank" rel="noopener">GitHub</a>
-        </p>
-        <span class="tag">NLP</span><span class="tag">RAG</span><span class="tag">LLM Evaluation</span>
+        <span class="tag">Anomaly Detection</span> <span class="tag">Autoencoder</span> <span class="tag">Cybersecurity</span>
       </article>
+
     </section>
 
     <!-- SKILLS -->
     <section id="skills" class="card" style="margin-top:18px">
       <h2>Skills</h2>
-      <div class="grid cols-3">
+      <div class="grid cols-2">
         <div>
-          <strong>Programming Languages</strong>
-          <p class="muted">Python, SQL, R, Bash, C#</p>
+          <p><strong>Programming:</strong> Python, SQL, R, Bash, C#</p>
+          <p><strong>ML & Forecasting:</strong> Scikit‑learn, XGBoost, LightGBM, Prophet, ARIMA, TimeGPT, DoWhy, EconML</p>
+          <p><strong>Deep Learning:</strong> PyTorch, TensorFlow, Keras, Hugging Face, torchaudio, torchvision</p>
         </div>
         <div>
-          <strong>Machine Learning</strong>
-          <p class="muted">Scikit-learn, XGBoost, LightGBM, Prophet, ARIMA, TimeGPT, DoWhy, EconML</p>
-        </div>
-        <div>
-          <strong>Deep Learning</strong>
-          <p class="muted">PyTorch, TensorFlow, Keras, Hugging Face, torchaudio, torchvision</p>
-        </div>
-        <div>
-          <strong>MLOps & Deployment</strong>
-          <p class="muted">MLflow, Docker, FastAPI, Git, Airflow, Model Monitoring (drift detection, SHAP, LIME)</p>
-        </div>
-        <div>
-          <strong>Data Engineering</strong>
-          <p class="muted">AWS, PySpark, Snowflake, ETL/ELT pipelines, Web Scraping</p>
-        </div>
-        <div>
-          <strong>Statistics & Experimentation</strong>
-          <p class="muted">Hypothesis Testing, Regression, Clustering, Causal Inference, A/B Testing, Bayesian Inference</p>
-        </div>
-        <div>
-          <strong>Visualization & BI</strong>
-          <p class="muted">Tableau, Power BI, Matplotlib, Seaborn, Plotly, Excel, PowerPoint</p>
+          <p><strong>MLOps & Data:</strong> MLflow, Docker, FastAPI, Git, Airflow, model monitoring (drift, SHAP, LIME), AWS, PySpark, Snowflake, ETL/ELT</p>
+          <p><strong>Statistics & Experimentation:</strong> Hypothesis testing, regression, clustering, causal inference, A/B testing, Bayesian inference</p>
+          <p><strong>Visualization & BI:</strong> Tableau, Power BI, Matplotlib, Seaborn, Plotly, Excel, PowerPoint</p>
         </div>
       </div>
+    </section>
+
+    <!-- EXPERIENCE (from resume, concise) -->
+    <section id="experience" class="card" style="margin-top:18px">
+      <h2>Experience</h2>
+      <ul class="list-plain">
+        <li><strong>ML Engineer – Research Assistant</strong>, Supply Chain Innovation Lab, USF — Climate‑driven crop yield forecasting (R² > 0.85); SHAP dashboards for policy; MLflow‑tracked pipelines.</li>
+        <li><strong>Data Scientist</strong>, MyFuse.In — Attrition/workload forecasting (+30% planning accuracy); uplift/causal L&D impact (churn −21%); prod pipelines w/ SHAP & drift monitoring.</li>
+        <li><strong>BI Specialist / Data Analyst</strong>, MyFuse.In — Automated Snowflake pipelines; Tableau KPIs; sourcing optimization (save $90K/yr).</li>
+        <li><strong>Data Analyst</strong>, Dyumath Technologies — ETL automation to 98% data accuracy; Power BI dashboards; ~$245K/yr cost savings.</li>
+      </ul>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="card" style="margin-top:18px">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:shamanth21@usf.edu" target="_blank" rel="noopener">shamanth21@usf.edu</a> · LinkedIn: <a href="https://www.linkedin.com/in/shamanth-km/" target="_blank" rel="noopener">/shamanth-km</a></p>
-      <p class="muted">I’m open to roles where I can own measurable outcomes and productionize models responsibly.</p>
+      <p><a href="mailto:shamanth21@usf.edu" target="_blank" rel="noopener">shamanth21@usf.edu</a> · <a href="https://www.linkedin.com/in/shamanth-km/" target="_blank" rel="noopener">/shamanth-km</a> · <a href="https://github.com/Shamanth-21" target="_blank" rel="noopener">@Shamanth-21</a></p>
     </section>
   </main>
 
   <footer>
     <p>© <span id="y"></span> Shamanth Kodipura Mahesh · Data Scientist · <a href="https://github.com/Shamanth-21/portfolio" target="_blank" rel="noopener">Source</a></p>
   </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
