@@ -5,8 +5,8 @@ This repository contains my personal portfolio site.
 It is a single-page HTML/CSS site deployed using **GitHub Pages**.
 
 ## 🔗 Links
-- **Live Site:** https://<your-username>.github.io/portfolio-<your_net_id>/
-- **Repository:** https://github.com/<your-username>/portfolio-<your_net_id>
+- **Live Site:** https://shamanth-21.github.io/portfolio-shamanth21/  
+- **Repository:** https://github.com/Shamanth-21/portfolio-shamanth21 
 
 ## 📄 About
 The portfolio highlights my background, projects, and skills.  
