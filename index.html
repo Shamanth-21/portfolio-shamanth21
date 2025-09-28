@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shamanth Kodipura Mahesh</title>
+  <title>Shamanth Kodipura Mahesh — Data Scientist</title>
   <meta name="description" content="Data scientist specializing in predictive modeling, experiment design, and ML systems — portfolio and case studies." />
   <meta name="color-scheme" content="light dark" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,16 +31,19 @@
       }
     }
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+    html,body{margin:0;height:100%;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);scroll-behavior:smooth}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
+    section{scroll-margin-top:90px}
     .container{max-width:1100px;margin:0 auto;padding:24px}
     header{position:sticky;top:0;background:linear-gradient(180deg,rgba(0,0,0,.25),rgba(0,0,0,0)),var(--bg);backdrop-filter:saturate(1.1) blur(6px);z-index:10}
     .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;border-bottom:1px solid rgba(255,255,255,.08)}
     .logo{display:flex;align-items:center;gap:12px}
-    .mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
-    nav a{margin-left:16px;font-weight:600}
-    .btn{display:inline-flex;gap:10px;align-items:center;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white;border:none;padding:12px 16px;border-radius:12px;font-weight:700;box-shadow:var(--shadow)}
+    .mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
+    .brand-name{font-size:20px;font-weight:800;letter-spacing:.2px}
+    .brand-sub{color:var(--muted);font-weight:600}
+    nav a{margin-left:18px;font-weight:700}
+    .btn{display:inline-flex;gap:10px;align-items:center;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white;border:none;padding:12px 16px;border-radius:12px;font-weight:800;box-shadow:var(--shadow)}
     .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,.18);color:var(--ink)}
     .btn:focus-visible{outline:3px solid var(--ring);outline-offset:2px}
     .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;margin:26px 0}
@@ -57,8 +60,9 @@
     .kpi strong{font-size:20px}
     .list-plain{padding-left:18px}
     footer{margin:40px 0 16px;color:var(--muted);text-align:center}
-    .pill{border:1px solid rgba(255,255,255,.14);padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.04)}
-    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:12px; padding:2px 6px; border:1px solid rgba(255,255,255,.18); border-radius:8px; background:rgba(255,255,255,.06)}
+    .pill{border:1px solid rgba(255,255,255,.14);padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.04);font-weight:700}
+    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:13px; padding:4px 8px; border:1px solid rgba(255,255,255,.22); border-radius:10px; background:rgba(255,255,255,.06)}
+    .quick-links a{font-size:16px;font-weight:700}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   </style>
   <script type="application/ld+json">
@@ -79,14 +83,14 @@
       <div class="logo">
         <div class="mark" aria-hidden="true"></div>
         <div>
-          <strong>Shamanth Kodipura Mahesh</strong><br>
-          <span class="muted">Data Scientist · ML & Analytics</span>
+          <div class="brand-name">Shamanth Kodipura Mahesh</div>
+          <div class="brand-sub">Data Scientist · ML & Analytics</div>
         </div>
       </div>
       <nav aria-label="Primary">
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#about" class="pill">About Me</a>
+        <a href="#projects" class="pill">Projects</a>
+        <a href="#skills" class="pill">Skills</a>
         <a href="#contact" class="pill">Contact</a>
       </nav>
     </div>
@@ -99,7 +103,7 @@
       <p>Passionate about turning data into impact, I bring over 6 years of experience building forecasting models, causal inference pipelines, LLM-based systems, and interpretable ML workflows. My work spans predictive analytics, time series forecasting, anomaly detection, and enterprise-scale MLOps solutions. I thrive at the intersection of data science and business, delivering reproducible, production-ready solutions that solve complex problems and drive decision-making.</p>
     </section>
 
-    <!-- HERO (PROJECTS CTA) -->
+    <!-- PROJECTS CTA ROW -->
     <section class="hero" id="projects">
       <div class="card">
         <h1 class="title">Projects</h1>
@@ -108,20 +112,80 @@
           <a class="btn" href="#projects-list">Explore Projects →</a>
         </p>
       </div>
-      <aside class="card">
-        <h2>Quick Links</h2>
+      <aside class="card quick-links" aria-labelledby="quicklinks">
+        <h2 id="quicklinks">Quick Links</h2>
         <p>
           <span class="kbd">GitHub</span> · <a href="https://github.com/Shamanth-21" target="_blank" rel="noopener">@Shamanth-21</a><br>
           <span class="kbd">LinkedIn</span> · <a href="https://www.linkedin.com/in/shamanth-km/" target="_blank" rel="noopener">/shamanth-km</a><br>
-          <span class="kbd">Email</span> · <a href="mailto:shamanth21@usf.edu">shamanth21@usf.edu</a>
+          <span class="kbd">Email</span> · <a href="mailto:shamanth21@usf.edu" target="_blank" rel="noopener">shamanth21@usf.edu</a>
         </p>
       </aside>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS GRID -->
     <section id="projects-list" class="grid cols-2">
-      <h2 class="sr-only">Projects</h2>
-      <!-- Project cards (same as earlier, omitted for brevity) -->
+      <h2 class="sr-only">Project Case Studies</h2>
+
+      <article class="card">
+        <h2>Predicting Online Shoppers' Purchasing Intentions</h2>
+        <p class="muted">Classifier for purchase intent on UCI e-commerce sessions; emphasized business alignment and actionable features.</p>
+        <div class="kpi"><strong>F1 = 0.64</strong><span class="muted"> · Precision 0.71 · Recall 0.58 · Accuracy 0.85</span></div>
+        <ul class="list-plain">
+          <li>• Best model <strong>XGBoost</strong> (no SMOTE); key drivers: Page Value, Bounce Rate, Exit Rate</li>
+          <li>• Pipeline: cleaning → one‑hot encoding → stratified split → scaling → model comparison</li>
+          <li>• Outcome: improved targeting while limiting false positives for marketing efficiency</li>
+        </ul>
+        <p>
+          <a href="#" target="_blank" rel="noopener">Slides</a> ·
+          <a href="#" target="_blank" rel="noopener">Report</a>
+        </p>
+        <span class="tag">Classification</span><span class="tag">XGBoost</span><span class="tag">E‑commerce</span>
+      </article>
+
+      <article class="card">
+        <h2>Demand Signal Classification Using LoRA‑tuned Phi‑1.5</h2>
+        <p class="muted">PEFT fine‑tuning to classify B2B sales notes into actionable categories under tight compute limits.</p>
+        <div class="kpi"><strong>Val acc 100%</strong><span class="muted"> · P=1.00 · R=1.00 · F1=1.00 (held‑out set)</span></div>
+        <ul class="list-plain">
+          <li>• <strong>LoRA</strong> adapters on 1.3B‑param Phi‑1.5; ~1% trainable params with 4‑bit quantization</li>
+          <li>• Custom 2,000‑note synthetic dataset with realistic noise (typos, spacing, urgency tokens)</li>
+          <li>• Colab T4 GPU; early stopping + HITL review planned to mitigate overfitting risks</li>
+        </ul>
+        <p>
+          <a href="#" target="_blank" rel="noopener">Slides</a> ·
+          <a href="#" target="_blank" rel="noopener">Report</a>
+        </p>
+        <span class="tag">LLM</span><span class="tag">LoRA</span><span class="tag">NLP</span>
+      </article>
+
+      <article class="card">
+        <h2>Autoencoders for Network Anomaly Detection (CICIDS‑2017)</h2>
+        <p class="muted">Unsupervised AE trained on benign traffic; flags attacks via reconstruction error thresholding.</p>
+        <div class="kpi"><strong>Precision 81.9%</strong><span class="muted"> · Recall 44.3% · F1 57.5% · ROC‑AUC 66.2%</span></div>
+        <ul class="list-plain">
+          <li>• Dense AE 78→16→78, MSE loss, Adam; StandardScaler on features</li>
+          <li>• Threshold at 88th percentile of validation error; visualized separability via histograms</li>
+          <li>• Lightweight for near real‑time IDS; next: VAE/LSTM‑AE for sequences</li>
+        </ul>
+        <p>
+          <a href="#" target="_blank" rel="noopener">Report</a>
+        </p>
+        <span class="tag">Anomaly Detection</span><span class="tag">Autoencoder</span><span class="tag">Cybersecurity</span>
+      </article>
+
+      <article class="card">
+        <h2>Benchmarking SQL‑Generating LLMs</h2>
+        <p class="muted">Evaluated Mistral‑7B‑Instruct and CodeLLaMA‑7B for NL→SQL with Spider and Chinook; tested plain vs schema vs RAG prompts.</p>
+        <ul class="list-plain">
+          <li>• Dual scoring: exact match + execution accuracy</li>
+          <li>• Findings: RAG reduced hallucinations; CodeLLaMA more structurally correct, Mistral better NL alignment</li>
+          <li>• Value: reproducible benchmark to vet LLMs before production</li>
+        </ul>
+        <p>
+          <a href="https://github.com/Shamanth-21" target="_blank" rel="noopener">GitHub</a>
+        </p>
+        <span class="tag">NLP</span><span class="tag">RAG</span><span class="tag">LLM Evaluation</span>
+      </article>
     </section>
 
     <!-- SKILLS -->
@@ -162,7 +226,7 @@
     <!-- CONTACT -->
     <section id="contact" class="card" style="margin-top:18px">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:shamanth21@usf.edu">shamanth21@usf.edu</a> · LinkedIn: <a href="https://www.linkedin.com/in/shamanth-km/" target="_blank" rel="noopener">/shamanth-km</a></p>
+      <p>Email: <a href="mailto:shamanth21@usf.edu" target="_blank" rel="noopener">shamanth21@usf.edu</a> · LinkedIn: <a href="https://www.linkedin.com/in/shamanth-km/" target="_blank" rel="noopener">/shamanth-km</a></p>
       <p class="muted">I’m open to roles where I can own measurable outcomes and productionize models responsibly.</p>
     </section>
   </main>
