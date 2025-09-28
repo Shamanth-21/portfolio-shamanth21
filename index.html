@@ -30,30 +30,33 @@
     a:hover{text-decoration:underline}
     header{position:sticky;top:0;background:var(--bg);z-index:10;border-bottom:1px solid rgba(255,255,255,.08)}
     .bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
-    .brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow)}
+    .brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:var(--shadow);display:inline-block;vertical-align:middle}
+    .brand-title{font-weight:800;font-size:20px;margin-left:10px;vertical-align:middle}
     nav a{margin-left:18px;font-weight:700;padding:8px 14px;border-radius:8px;background:rgba(255,255,255,.04)}
     .hero-name{background:linear-gradient(135deg, rgba(45,212,191,.2), rgba(124,58,237,.2))}
     .hero-wrap{max-width:1100px;margin:0 auto;padding:60px 24px 72px;text-align:center}
     .hero-title{font-size:64px;font-weight:800;margin-bottom:12px}
     .hero-sub{font-size:20px;color:var(--muted)}
     .container{max-width:1100px;margin:0 auto;padding:24px}
-    .section{margin-top:28px}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
-    h2{font-size:26px;margin-bottom:12px}
-    .projects-grid{display:grid;gap:22px}
-    .project h3{font-size:28px;margin-bottom:8px}
+    .section{margin-top:60px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
+    h2{font-size:26px;margin-bottom:20px}
+    .projects-grid{display:grid;gap:32px}
+    .project h3{font-size:28px;margin-bottom:12px}
     .project .muted{color:var(--muted)}
-    .kpi{margin:8px 0;font-weight:600}
+    .kpi{margin:12px 0;font-weight:600}
     .list-plain{padding-left:20px}
-    .tag{display:inline-block;margin:6px 6px 0 0;padding:6px 12px;border-radius:999px;background:rgba(109,94,252,.2);color:#e0e4ff;font-size:13px}
-    footer{margin:40px 0 16px;text-align:center;color:var(--muted)}
+    .tag{display:inline-block;margin:8px 8px 0 0;padding:6px 12px;border-radius:999px;background:rgba(109,94,252,.2);color:#e0e4ff;font-size:13px}
+    footer{margin:60px 0 24px;text-align:center;color:var(--muted)}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   </style>
 </head>
 <body>
   <header>
     <div class="bar">
-      <div class="brand-mark" aria-hidden="true"></div>
+      <div>
+        <div class="brand-mark" aria-hidden="true"></div><span class="brand-title">My Portfolio</span>
+      </div>
       <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -71,22 +74,31 @@
   </div>
 
   <main class="container">
-    <!-- ABOUT ME -->
     <section id="about" class="card section">
       <h2>About Me</h2>
-      <p>I’m a data scientist with 6+ years of hands-on experience translating messy, multi‑source data into decisions. I build forecasting models, causal inference pipelines, LLM/NLP systems, and interpretable ML workflows—always with deployment and monitoring in mind. I’m fluent in Python and SQL and ship with MLflow, Docker, and FastAPI so work is reproducible and production‑ready.</p>
-      <p>Recent highlights include climate‑driven yield forecasting with SHAP dashboards for policy planning; HR analytics at MyFuse.In where I improved workforce planning accuracy by 30% and reduced churn by 21% using uplift/causal methods; and enterprise data automation saving ~$245K/year through robust ETL and BI. I enjoy partnering with domain experts and leadership to turn ambiguous questions into measurable outcomes.</p>
+      <p>I’m a data scientist with 6+ years of hands-on experience translating messy, multi-source data into decisions. I build forecasting models, causal inference pipelines, LLM/NLP systems, and interpretable ML workflows—always with deployment and monitoring in mind. I’m fluent in Python and SQL and ship with MLflow, Docker, and FastAPI so work is reproducible and production-ready.</p>
+      <p>Recent highlights include climate-driven yield forecasting with SHAP dashboards for policy planning; HR analytics at MyFuse.In where I improved workforce planning accuracy by 30% and reduced churn by 21% using uplift/causal methods; and enterprise data automation saving ~$245K/year through robust ETL and BI. I enjoy partnering with domain experts and leadership to turn ambiguous questions into measurable outcomes.</p>
     </section>
 
-    <!-- PROJECTS INTRO & QUICK LINKS ROW -->
+    <section id="skills" class="card section">
+      <h2>Skills</h2>
+      <div class="projects-grid">
+        <p><strong>Programming:</strong> Python, SQL, R, Bash, C#</p>
+        <p><strong>ML & Forecasting:</strong> Scikit-learn, XGBoost, LightGBM, Prophet, ARIMA, TimeGPT, DoWhy, EconML</p>
+        <p><strong>Deep Learning:</strong> PyTorch, TensorFlow, Keras, Hugging Face, torchaudio, torchvision</p>
+        <p><strong>MLOps & Deployment:</strong> MLflow, Docker, FastAPI, Git, Airflow, model monitoring (drift, SHAP, LIME)</p>
+        <p><strong>Data Engineering:</strong> AWS, PySpark, Snowflake, ETL/ELT, Feature Engineering, Web Scraping</p>
+        <p><strong>Statistics & Experimentation:</strong> Hypothesis testing, regression, clustering, causal inference, A/B testing, Bayesian inference</p>
+        <p><strong>Visualization & BI:</strong> Tableau, Power BI, Matplotlib, Seaborn, Plotly, Excel, PowerPoint</p>
+      </div>
+    </section>
+
     <section class="card section" id="projects">
       <h2>Projects</h2>
       <p class="muted">Selected projects demonstrating end‑to‑end ownership: framing → modeling → evaluation → delivery.</p>
     </section>
 
-    <!-- PROJECTS GRID (full-width cards) -->
     <section id="projects-list" class="projects-grid section">
-
       <article class="card project">
         <h3>Benchmarking SQL‑Generating LLMs (NL→SQL)</h3>
         <p class="muted">Built a reproducible evaluation harness for text‑to‑SQL using exact‑match and execution accuracy. Compared Mistral‑7B‑Instruct and CodeLLaMA‑7B across plain, schema‑aware, and RAG prompts; added LoRA fine‑tuning for CodeLLaMA on Chinook.</p>
@@ -132,28 +144,9 @@
         </ul>
         <span class="tag">Anomaly Detection</span> <span class="tag">Autoencoder</span> <span class="tag">Cybersecurity</span>
       </article>
-
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="card section">
-      <h2>Skills</h2>
-      <div class="projects-grid">
-        <p><strong>Programming:</strong> Python, SQL, R, Bash, C#</p>
-        <p><strong>ML & Forecasting:</strong> Scikit‑learn, XGBoost, LightGBM, Prophet, ARIMA, TimeGPT, DoWhy, EconML</p>
-        <p><strong>Deep Learning:</strong> PyTorch, TensorFlow, Keras, Hugging Face, torchaudio, torchvision</p>
-        <p><strong>MLOps & Deployment:</strong> MLflow, Docker, FastAPI, Git, Airflow, model monitoring (drift, SHAP, LIME)</p>
-        <p><strong>Data Engineering:</strong> AWS, PySpark, Snowflake, ETL/ELT, Feature Engineering, Web Scraping</p>
-        <p><strong>Statistics & Experimentation:</strong> Hypothesis testing, regression, clustering, causal inference, A/B testing, Bayesian inference</p>
-        <p><strong>Visualization & BI:</strong> Tableau, Power BI, Matplotlib, Seaborn, Plotly, Excel, PowerPoint</p>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE (from resume, concise) -->
-    
-
-    <!-- CONTACT -->
-    <section id="contact" class="card" style="margin-top:18px">
+    <section id="contact" class="card section">
       <h2>Contact</h2>
       <p><a href="mailto:shamanth21@usf.edu" target="_blank" rel="noopener">shamanth21@usf.edu</a> · <a href="https://www.linkedin.com/in/shamanth-km/" target="_blank" rel="noopener">/shamanth-km</a> · <a href="https://github.com/Shamanth-21" target="_blank" rel="noopener">@Shamanth-21</a></p>
     </section>
