@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shamanth Kodipura Mahesh — Data Scientist</title>
+  <title>Shamanth Kodipura Mahesh</title>
   <meta name="description" content="Data scientist specializing in predictive modeling, experiment design, and ML systems — portfolio and case studies." />
   <meta name="color-scheme" content="light dark" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
   <meta property="og:title" content="Shamanth Kodipura Mahesh — Data Scientist">
-  <meta property="og:description" content="Portfolio, projects, publications, and contact." />
+  <meta property="og:description" content="Portfolio, projects, skills, and contact." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://Shamanth-21.github.io/portfolio/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -84,8 +84,8 @@
         </div>
       </div>
       <nav aria-label="Primary">
+        <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
-        <a href="#publications">Publications</a>
         <a href="#skills">Skills</a>
         <a href="#contact" class="pill">Contact</a>
       </nav>
@@ -93,33 +93,71 @@
   </header>
 
   <main class="container">
-    <!-- HERO -->
-    <section class="hero" id="about">
+    <!-- ABOUT ME -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Passionate about turning data into impact, I bring over 6 years of experience building forecasting models, causal inference pipelines, LLM-based systems, and interpretable ML workflows. My work spans predictive analytics, time series forecasting, anomaly detection, and enterprise-scale MLOps solutions. I thrive at the intersection of data science and business, delivering reproducible, production-ready solutions that solve complex problems and drive decision-making.</p>
+    </section>
+
+    <!-- HERO (PROJECTS CTA) -->
+    <section class="hero" id="projects">
       <div class="card">
-        <h1 class="title">I build models that move the needle</h1>
-        <p class="muted">Data scientist focused on turning ambiguous problems into measurable outcomes. Recent work spans e‑commerce conversion prediction, LLM fine‑tuning for sales signal extraction, and network anomaly detection for security.</p>
+        <h1 class="title">Projects</h1>
+        <p class="muted">Highlighted below are selected projects that showcase my technical expertise and ability to drive measurable outcomes.</p>
         <p>
-          <a class="btn" href="#projects">View case studies →</a>
+          <a class="btn" href="#projects-list">Explore Projects →</a>
         </p>
-        <ul class="list-plain">
-          <li>• Interests: forecasting, causal inference, NLP for ops, trustworthy AI</li>
-          <li>• Looking for: data science roles in <em>supply chain / healthcare / fintech</em></li>
-          <li>• Location: City, State · Open to hybrid/remote</li>
-        </ul>
       </div>
-      <aside class="card" aria-labelledby="quicklinks">
-        <h2 id="quicklinks">Quick Links</h2>
+      <aside class="card">
+        <h2>Quick Links</h2>
         <p>
           <span class="kbd">GitHub</span> · <a href="https://github.com/Shamanth-21" target="_blank" rel="noopener">@Shamanth-21</a><br>
           <span class="kbd">LinkedIn</span> · <a href="https://www.linkedin.com/in/shamanth-km/" target="_blank" rel="noopener">/shamanth-km</a><br>
           <span class="kbd">Email</span> · <a href="mailto:shamanth21@usf.edu">shamanth21@usf.edu</a>
         </p>
-        <p class="muted">Tip: keep these current. Recruiters often click these first.</p>
       </aside>
     </section>
 
     <!-- PROJECTS -->
-    <!-- (Projects section unchanged for brevity) -->
+    <section id="projects-list" class="grid cols-2">
+      <h2 class="sr-only">Projects</h2>
+      <!-- Project cards (same as earlier, omitted for brevity) -->
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="card" style="margin-top:18px">
+      <h2>Skills</h2>
+      <div class="grid cols-3">
+        <div>
+          <strong>Programming Languages</strong>
+          <p class="muted">Python, SQL, R, Bash, C#</p>
+        </div>
+        <div>
+          <strong>Machine Learning</strong>
+          <p class="muted">Scikit-learn, XGBoost, LightGBM, Prophet, ARIMA, TimeGPT, DoWhy, EconML</p>
+        </div>
+        <div>
+          <strong>Deep Learning</strong>
+          <p class="muted">PyTorch, TensorFlow, Keras, Hugging Face, torchaudio, torchvision</p>
+        </div>
+        <div>
+          <strong>MLOps & Deployment</strong>
+          <p class="muted">MLflow, Docker, FastAPI, Git, Airflow, Model Monitoring (drift detection, SHAP, LIME)</p>
+        </div>
+        <div>
+          <strong>Data Engineering</strong>
+          <p class="muted">AWS, PySpark, Snowflake, ETL/ELT pipelines, Web Scraping</p>
+        </div>
+        <div>
+          <strong>Statistics & Experimentation</strong>
+          <p class="muted">Hypothesis Testing, Regression, Clustering, Causal Inference, A/B Testing, Bayesian Inference</p>
+        </div>
+        <div>
+          <strong>Visualization & BI</strong>
+          <p class="muted">Tableau, Power BI, Matplotlib, Seaborn, Plotly, Excel, PowerPoint</p>
+        </div>
+      </div>
+    </section>
 
     <!-- CONTACT -->
     <section id="contact" class="card" style="margin-top:18px">
